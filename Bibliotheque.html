@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Automatismes et Portails sur mesures à votre service</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Automatismes et Portails sur mesures</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Accueil</a></li>
+                    <li class="active"><a href="#">Application devis</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1 class="text-primary">Devis de portails en ligne</h1>
+            <hr />
+            <h3 >Dimensions</h3>
+            <form method="POST" action="php/Devis.php">
+                <div class="row">
+                    <div class="form-group col-xs-8 col-sm-6 col-md-4">
+                        <label for="largeur">Largeur :</label>
+                        <input type="number" class="form-control" name="Largeur" placeholder="Entrer la largeur en cm" required>
+                    </div>
+                    <div class="form-group col-xs-8 col-sm-6 col-md-4">
+                        <label for="hauteur">Hauteur :</label>
+                        <input type="number" class="form-control" name="Hauteur" placeholder="Entrer la hauteur en cm" required>
+                    </div>
+                    <div class="form-group col-xs-8 col-sm-6 col-md-4">
+                        <label for="TypeMateriau">Type de Matériau :</label>
+                        <select class="form-control" name="TypeMateriau">
+                            <option value="3" >Fer</option>
+                            <option value="2" >Bois</option>
+                            <option value="1" >Alu</option>
+                            <option value="4" >PVC</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-8">
+                        <label for="prestation">Prestation souhaitée :</label>
+                        <label class="radio-inline"><input type="radio" name="Prestation" value="1" checked = "checked">Fourniture et pose</label>
+                        <label class="radio-inline"><input type="radio" name="Prestation" value="2">Pose uniquement</label>
+                        <label class="radio-inline"><input type="radio" name="Prestation" value="3">Fourniture uniquement</label>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-4">
+                        <label class="checkbox-inline"><input type="checkbox" name="Automatisme">Avec Automatisme</label>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn center-block">Calcul du devis</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
+
+
+
